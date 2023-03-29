@@ -14,6 +14,7 @@ use AbdullahFaqeir\LaravelCDN\ProviderFactory;
 use Aws\S3\S3Client;
 use Aws\Command;
 use Symfony\Component\Finder\SplFileInfo;
+use AbdullahFaqeir\LaravelCDN\Providers\AwsS3Provider;
 use AbdullahFaqeir\LaravelCDN\Validators\Contracts\ProviderValidatorInterface;
 use Symfony\Component\Console\Output\ConsoleOutput;
 use Illuminate\Config\Repository;
@@ -96,7 +97,7 @@ class CdnTest extends TestCase
     {
         $configuration_file = [
             'bypass'    => false,
-            'default'   => 'AwsS3',
+            'default'   => AwsS3Provider::class,
             'url'       => 'https://s3.amazonaws.com',
             'threshold' => 10,
             'providers' => [

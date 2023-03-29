@@ -34,7 +34,7 @@ class ProviderFactoryTest extends TestCase
 
     public function testCreateReturnCorrectProviderObject(): void
     {
-        $configurations = ['default' => 'AwsS3'];
+        $configurations = ['default' => AwsS3Provider::class];
 
         $m_aws_s3 = M::mock(AwsS3Provider::class);
 

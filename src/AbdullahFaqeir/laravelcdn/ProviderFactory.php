@@ -19,7 +19,6 @@ use AbdullahFaqeir\LaravelCDN\Exceptions\UnsupportedProviderException;
  */
 class ProviderFactory implements ProviderFactoryInterface
 {
-    public const DRIVERS_NAMESPACE = 'AbdullahFaqeir\\LaravelCDN\\Providers\\';
 
     /**
      * Create and return an instance of the corresponding
@@ -38,15 +37,12 @@ class ProviderFactory implements ProviderFactoryInterface
             throw new MissingConfigurationException('Missing Configurations: Default Provider');
         }
 
-        // prepare the full driver class name
-        $driver_class = self::DRIVERS_NAMESPACE.ucwords($provider).'Provider';
-
-        if (!class_exists($driver_class)) {
+        if (!class_exists($provider)) {
             throw new UnsupportedProviderException("CDN provider ($provider) is not supported");
         }
 
         // initialize the driver object and initialize it with the configurations
-        return App::make($driver_class)
+        return App::make($provider)
                   ->init($configurations);
     }
 }

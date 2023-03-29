@@ -28,7 +28,7 @@ return [
     | Supported provider: Amazon S3 (AwsS3)
     |
     */
-    'default'   => 'AwsS3',
+    'default'   => \AbdullahFaqeir\LaravelCDN\Providers\AwsS3Provider::class,
 
     /*
     |--------------------------------------------------------------------------
