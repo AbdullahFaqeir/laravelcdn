@@ -2,7 +2,6 @@
 
 namespace AbdullahFaqeir\LaravelCDN;
 
-use Illuminate\Support\Str;
 use Illuminate\Config\Repository;
 use AbdullahFaqeir\LaravelCDN\Contracts\CdnHelperInterface;
 use AbdullahFaqeir\LaravelCDN\Exceptions\MissingConfigurationException;
@@ -65,9 +64,7 @@ class CdnHelper implements CdnHelperInterface
         // search for any null or empty field to throw an exception
         $missing = '';
         foreach ($configuration as $key => $value) {
-            if (in_array($key, $required, false)
-                && Str::of($value)
-                      ->isEmpty()) {
+            if (empty($value) && in_array($key, $required, false)) {
                 $missing .= ' '.$key;
             }
         }

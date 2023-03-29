@@ -2,7 +2,6 @@
 
 namespace AbdullahFaqeir\LaravelCDN\Validators;
 
-use Illuminate\Support\Str;
 use AbdullahFaqeir\LaravelCDN\Exceptions\MissingConfigurationException;
 use AbdullahFaqeir\LaravelCDN\Validators\Contracts\ProviderValidatorInterface;
 
@@ -28,9 +27,7 @@ class ProviderValidator extends Validator implements ProviderValidatorInterface
         // search for any null or empty field to throw an exception
         $missing = '';
         foreach ($configuration as $key => $value) {
-            if (in_array($key, $required, false)
-                && Str::of($value)
-                      ->isEmpty()) {
+            if (empty($value) && in_array($key, $required, false)) {
                 $missing .= ' '.$key;
             }
         }
