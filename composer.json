@@ -41,8 +41,13 @@
         "classmap": [
             "tests/TestCase.php"
         ],
-        "psr-0": {
+        "psr-4": {
             "AbdullahFaqeir\\LaravelCDN\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AbdullahFaqeir\\LaravelCDN\\Tests\\": "tests"
         }
     },
     "extra": {
@@ -55,5 +60,6 @@
             }
         }
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

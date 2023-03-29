@@ -18,11 +18,11 @@ use AbdullahFaqeir\LaravelCDN\Providers\AwsS3Provider;
 use AbdullahFaqeir\LaravelCDN\Validators\Contracts\ProviderValidatorInterface;
 use Symfony\Component\Console\Output\ConsoleOutput;
 use Illuminate\Config\Repository;
-use AbdullahFaqeir\LaravelCDN\Contracts\CdnHelperInterface;
-use AbdullahFaqeir\LaravelCDN\Contracts\ProviderFactoryInterface;
+use AbdullahFaqeir\LaravelCDN\src\Contracts\CdnHelperInterface;
+use AbdullahFaqeir\LaravelCDN\src\Contracts\ProviderFactoryInterface;
 use AbdullahFaqeir\LaravelCDN\Providers\Provider;
-use AbdullahFaqeir\LaravelCDN\Contracts\FinderInterface;
-use AbdullahFaqeir\LaravelCDN\Contracts\AssetInterface;
+use AbdullahFaqeir\LaravelCDN\src\Contracts\FinderInterface;
+use AbdullahFaqeir\LaravelCDN\src\Contracts\AssetInterface;
 
 /**
  * Class CdnTest.

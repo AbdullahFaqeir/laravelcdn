@@ -7,9 +7,9 @@ use AllowDynamicProperties;
 use AbdullahFaqeir\LaravelCDN\CdnFacade;
 use AbdullahFaqeir\LaravelCDN\Providers\AwsS3Provider;
 use AbdullahFaqeir\LaravelCDN\Validators\CdnFacadeValidator;
-use AbdullahFaqeir\laravelcdn\Exceptions\EmptyPathException;
-use AbdullahFaqeir\LaravelCDN\Contracts\ProviderFactoryInterface;
-use AbdullahFaqeir\LaravelCDN\Contracts\CdnHelperInterface;
+use AbdullahFaqeir\LaravelCDN\src\Exceptions\EmptyPathException;
+use AbdullahFaqeir\LaravelCDN\src\Contracts\ProviderFactoryInterface;
+use AbdullahFaqeir\LaravelCDN\src\Contracts\CdnHelperInterface;
 
 /**
  * Class CdnFacadeTest.

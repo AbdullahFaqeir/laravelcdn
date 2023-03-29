@@ -7,7 +7,7 @@ use AllowDynamicProperties;
 use Illuminate\Support\Facades\App;
 use AbdullahFaqeir\LaravelCDN\ProviderFactory;
 use AbdullahFaqeir\LaravelCDN\Providers\AwsS3Provider;
-use AbdullahFaqeir\LaravelCDN\Exceptions\MissingConfigurationException;
+use AbdullahFaqeir\LaravelCDN\src\Exceptions\MissingConfigurationException;
 
 /**
  * Class ProviderFactoryTest.
