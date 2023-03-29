@@ -15,7 +15,7 @@ return [
     | Default: false
     |
     */
-    'bypass' => env('CDN_Bypass', false),
+    'bypass'    => env('CDN_BYPASS', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -28,7 +28,7 @@ return [
     | Supported provider: Amazon S3 (AwsS3)
     |
     */
-    'default' => 'AwsS3',
+    'default'   => 'AwsS3',
 
     /*
     |--------------------------------------------------------------------------
@@ -38,7 +38,7 @@ return [
     | Set your CDN url, [without the bucket name]
     |
     */
-    'url' => env('CDN_Url', 'https://s3.amazonaws.com'),
+    'url'       => env('CDN_URL', 'https://s3.amazonaws.com'),
 
     /*
     |--------------------------------------------------------------------------
@@ -83,7 +83,7 @@ return [
                 | http://docs.aws.amazon.com/aws-sdk-php/v3/guide/guide/configuration.html#version
                 |
                 */
-                'version' => 'latest',
+                'version'       => 'latest',
 
                 /*
                 |--------------------------------------------------------------------------
@@ -94,7 +94,7 @@ return [
                 | https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region
                 |
                 */
-                'region' => '',
+                'region'        => '',
 
                 /*
                 |--------------------------------------------------------------------------
@@ -110,7 +110,7 @@ return [
                 | https://www.digitalocean.com/community/questions/how-to-use-digitalocean-spaces-with-the-aws-s3-sdks?answer=39594
                 |
                 */
-                'endpoint' => null,
+                'endpoint'      => null,
 
                 /*
                 |--------------------------------------------------------------------------
@@ -165,7 +165,7 @@ return [
                 | bucket-owner-read, bucket-owner-full-control, log-delivery-write
                 |
                 */
-                'acl' => 'public-read',
+                'acl'           => 'public-read',
 
                 /*
                 |--------------------------------------------------------------------------
@@ -178,8 +178,8 @@ return [
                 |
                 */
                 'cloudfront'    => [
-                    'use'     => env('CDN_UseCloudFront', false),
-                    'cdn_url' => env('CDN_CloudFrontUrl', ''),
+                    'use'     => env('CDN_USE_CLOUD_FRONT', false),
+                    'cdn_url' => env('CDN_CLOUD_FRONT_URL', ''),
                 ],
 
                 /*
@@ -190,7 +190,7 @@ return [
                 | Add metadata to each S3 file
                 |
                 */
-                'metadata' => [],
+                'metadata'      => [],
 
                 /*
                 |--------------------------------------------------------------------------
@@ -200,7 +200,7 @@ return [
                 | Add expiry data to file
                 |
                 */
-                'expires' => gmdate('D, d M Y H:i:s T', strtotime('+5 years')),
+                'expires'       => gmdate('D, d M Y H:i:s T', strtotime('+5 years')),
 
                 /*
                 |--------------------------------------------------------------------------
@@ -252,5 +252,4 @@ return [
         'patterns'    => [],
         'hidden'      => true,
     ],
-
 ];

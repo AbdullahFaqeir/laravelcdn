@@ -8,16 +8,15 @@
          convertWarningsToExceptions="true"
          processIsolation="false"
          stopOnFailure="false"
-         syntaxCheck="false"
 >
     <testsuites>
         <testsuite name="CDN Package Test Suite">
-            <directory suffix=".php">./tests/Publiux</directory>
+            <directory suffix=".php">./tests/AbdullahFaqeir</directory>
         </testsuite>
     </testsuites>
 
     <!--<logging>-->
-        <!--<log type="coverage-html" target="./CodeCoverage/"/>-->
+    <!--<log type="coverage-html" target="./CodeCoverage/"/>-->
     <!--</logging>-->
 
 </phpunit>
