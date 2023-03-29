@@ -40,7 +40,6 @@
     "autoload": {
         "classmap": [
             "tests/TestCase.php",
-            "src/AbdullahFaqeir/LaravelCDN/Exceptions"
         ],
         "psr-0": {
             "AbdullahFaqeir\\LaravelCDN\\": "src/"
