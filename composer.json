@@ -39,7 +39,7 @@
     },
     "autoload": {
         "classmap": [
-            "tests/TestCase.php",
+            "tests/TestCase.php"
         ],
         "psr-0": {
             "AbdullahFaqeir\\LaravelCDN\\": "src/"
